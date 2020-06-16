@@ -30,9 +30,9 @@ public class ReadmeSamples {
      */
     public void createBlobContainerClient() {
         BlobContainerAsyncClient blobContainerAsyncClient = new BlobContainerClientBuilder()
-            .connectionString("DefaultEndpointsProtocol=https;AccountName=hubdemoali;AccountKey=YE0oNCQi1mhZA8HU/eos/swf2p2Zceiq9Y7JTEYHMtJ9MdgX8YfbhB7C5h2j7f36VpexpBvGOCUv5FzohqGmdQ==;EndpointSuffix=core.windows.net")
-            .containerName("hub")
-            .sasToken("?sv=2019-10-10&ss=b&srt=sco&sp=rwdlacx&se=2020-06-17T10:31:41Z&st=2020-06-16T02:31:41Z&spr=https&sig=W9xiYEYUKGUVRphXsKCB%2BxmMVxu%2BS4mmNlCCdHldhgg%3D")
+            .connectionString("")
+            .containerName("")
+            .sasToken("")
             .buildAsyncClient();
     }
 
@@ -42,14 +42,14 @@ public class ReadmeSamples {
      */
     public void consumeEventsUsingEventProcessor() throws InterruptedException {
     	 BlobContainerAsyncClient blobContainerAsyncClient = new BlobContainerClientBuilder()
-    	            .connectionString("DefaultEndpointsProtocol=https;AccountName=hubdemoali;AccountKey=YE0oNCQi1mhZA8HU/eos/swf2p2Zceiq9Y7JTEYHMtJ9MdgX8YfbhB7C5h2j7f36VpexpBvGOCUv5FzohqGmdQ==;EndpointSuffix=core.windows.net")
-    	            .containerName("hub")
-    	            .sasToken("?sv=2019-10-10&ss=b&srt=sco&sp=rwdlacx&se=2020-06-17T10:31:41Z&st=2020-06-16T02:31:41Z&spr=https&sig=W9xiYEYUKGUVRphXsKCB%2BxmMVxu%2BS4mmNlCCdHldhgg%3D")
+    	            .connectionString("")
+    	            .containerName("")
+    	            .sasToken("")
     	            .buildAsyncClient();
 
         EventProcessorClient eventProcessorClient = new EventProcessorClientBuilder()
-            .consumerGroup("con")
-            .connectionString("Endpoint=sb://demoalitest.servicebus.windows.net/;SharedAccessKeyName=receiver;SharedAccessKey=K0kPrjwNl0pYa7kEJQHEV8+YUFPNTB9sk0vL0Gipy2Y=;EntityPath=demotesting")
+            .consumerGroup("")
+            .connectionString("")
             .checkpointStore(new BlobCheckpointStore(blobContainerAsyncClient))
             .processEvent(eventContext -> {
                 System.out.println("Partition id = " + eventContext.getPartitionContext().getPartitionId() + " and "

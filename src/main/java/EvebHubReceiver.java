@@ -21,13 +21,13 @@ import java.util.concurrent.CountDownLatch;
  */
 public class EvebHubReceiver {
 
-    private static final String STORAGE_CONNECTION_STRING = "DefaultEndpointsProtocol=https;AccountName=hubdemoali;AccountKey=YE0oNCQi1mhZA8HU/eos/swf2p2Zceiq9Y7JTEYHMtJ9MdgX8YfbhB7C5h2j7f36VpexpBvGOCUv5FzohqGmdQ==;EndpointSuffix=core.windows.net";
-    private static final String SAS_TOKEN = "?sv=2019-10-10&ss=b&srt=sco&sp=rwdlacx&se=2020-06-17T10:31:41Z&st=2020-06-16T02:31:41Z&spr=https&sig=W9xiYEYUKGUVRphXsKCB%2BxmMVxu%2BS4mmNlCCdHldhgg%3D";
+    private static final String STORAGE_CONNECTION_STRING = "";
+    private static final String SAS_TOKEN = "";
     private static final String CONTAINER_NAME = "hub";
 
-    private static final String EH_CONNECTION_STRING = "Endpoint=sb://demoalitest.servicebus.windows.net/;SharedAccessKeyName=receiver;SharedAccessKey=K0kPrjwNl0pYa7kEJQHEV8+YUFPNTB9sk0vL0Gipy2Y=;EntityPath=demotesting";
-    private static final String CONSUMER_GROUP = "con";
-    private static final String EVENT_HUB_NAME = "demotesting";
+    private static final String EH_CONNECTION_STRING = "";
+    private static final String CONSUMER_GROUP = "";
+    private static final String EVENT_HUB_NAME = "";
     public static final String STORAGE_SERVICE_VERSION = "2017-11-09";
 
     /**

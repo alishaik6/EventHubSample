@@ -17,10 +17,10 @@ public class ReceiveUsingOffset {
             throws EventHubException, ExecutionException, InterruptedException, IOException {
 
         final ConnectionStringBuilder connStr = new ConnectionStringBuilder()
-                .setNamespaceName("demoalitest") // to target National clouds - use .setEndpoint(URI)
-                .setEventHubName("demotesting")
-                .setSasKeyName("receiver")
-                .setSasKey("K0kPrjwNl0pYa7kEJQHEV8+YUFPNTB9sk0vL0Gipy2Y=");
+                .setNamespaceName("") // to target National clouds - use .setEndpoint(URI)
+                .setEventHubName("")
+                .setSasKeyName("")
+                .setSasKey("");
 
         final ScheduledExecutorService executorService = Executors.newScheduledThreadPool(4);
         final EventHubClient ehClient = EventHubClient.createFromConnectionStringSync(connStr.toString(), executorService);
